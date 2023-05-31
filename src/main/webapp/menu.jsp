@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>图书馆预约助手</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="static/bootstrap.min.js">
     <script src="static/jquery.slim.min.js" ></script>
     <script src="static/bootstrap.bundle.min.js"></script>
@@ -20,21 +21,31 @@
 <a href="reserve?sjdId=B938B85919CE2FA2E0530100007F477B&rq=<%=request.getAttribute("today")%>" class="btn btn-primary">中午</a>
 <a href="reserve?sjdId=BA3ECD1E0CDEA660E0530100007F31F3&rq=<%=request.getAttribute("today")%>" class="btn btn-primary">下午1</a>
 <a href="reserve?sjdId=bdc188a771724d1e9a0615eaad629417&rq=<%=request.getAttribute("today")%>" class="btn btn-primary">下午2</a>
-<a href="reserve?sjdId=8de0da75f43e45059e9960dca9f13cc8&rq=<%=request.getAttribute("today")%>" class="btn btn-primary">晚上1</a>
-<a href="reserve?sjdId=2cc5677b8c27481ba66a8f0b6b474b9b&rq=<%=request.getAttribute("today")%>" class="btn btn-primary">晚上2</a>
+<a href="reserve?sjdId=8de0da75f43e45059e9960dca9f13cc8&rq=<%=request.getAttribute("today")%>" class="btn btn-primary alter">晚上1</a>
+<a href="reserve?sjdId=2cc5677b8c27481ba66a8f0b6b474b9b&rq=<%=request.getAttribute("today")%>" class="btn btn-primary alter">晚上2</a>
 <div class="date"><%=request.getAttribute("tomorrow")%></div>
 <a href="reserve?sjdId=12e76ad31716411289f351cc3b788036&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">早上1</a>
 <a href="reserve?sjdId=ab548b5375e5477eb401f502d3f3dcd9&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">早上2</a>
 <a href="reserve?sjdId=B938B85919CE2FA2E0530100007F477B&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">中午</a>
 <a href="reserve?sjdId=BA3ECD1E0CDEA660E0530100007F31F3&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">下午1</a>
 <a href="reserve?sjdId=bdc188a771724d1e9a0615eaad629417&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">下午2</a>
-<a href="reserve?sjdId=8de0da75f43e45059e9960dca9f13cc8&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">晚上1</a>
-<a href="reserve?sjdId=2cc5677b8c27481ba66a8f0b6b474b9b&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary">晚上2</a>
-<div>试用版本</div>
+<a href="reserve?sjdId=8de0da75f43e45059e9960dca9f13cc8&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary alter">晚上1</a>
+<a href="reserve?sjdId=2cc5677b8c27481ba66a8f0b6b474b9b&rq=<%=request.getAttribute("tomorrow")%>" class="btn btn-primary alter">晚上2</a>
+<div style="margin-top: 10px">试用版本</div>
 </body>
 <style>
-    body{
-        margin:50px;
+    @media screen and (min-width: 320px){
+        body{
+            margin:20px;
+        }
+        .alter{
+            margin-top: 10px;
+        }
+    }
+    @media screen and (min-width: 640px) {
+        body{
+            margin:50px;
+        }
     }
     .date{
         margin-top: 10px;
