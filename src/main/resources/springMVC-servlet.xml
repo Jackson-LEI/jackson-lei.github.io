@@ -14,7 +14,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <mvc:view-controller path="/" view-name="menu"/>
+    <mvc:view-controller path="/" view-name="index"/>
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
 </beans>
